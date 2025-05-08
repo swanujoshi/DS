@@ -1,0 +1,24 @@
+commandlab3a
+sudo apt install mpich
+mpicc sum_array_mpi.c -o sum_array_mpi
+mpirun -np 4 ./sum_array_mpi
+
+
+
+
+output :
+
+ubantulinux@ubantulinux:~/Practice/Lab3$ sudo apt install mpich
+[sudo] password for ubantulinux: 
+mpich is already the newest version (4.2.0-14).
+Summary:
+  Upgrading: 0, Installing: 0, Removing: 0, Not Upgrading: 350
+  
+ubantulinux@ubantulinux:~/Practice/Lab3$ mpicc sum_array_mpi.c -o sum_array_mpi
+
+ubantulinux@ubantulinux:~/Practice/Lab3$ mpirun -np 4 ./sum_array_mpi
+
+Sum of array is : 55
+
+
+
