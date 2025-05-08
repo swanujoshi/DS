@@ -1,0 +1,15 @@
+Commands:
+javac BullyAlgorithmExample.java
+java BullyAlgorithmExample
+
+Output:
+student@student:~$ java BullyAlgorithmExample
+Node 3 initiates election.
+Node 4 receives election message from Node 3
+Node 4 responds to Node 3
+Node 3 receives response from Node 4
+Node 5 receives election message from Node 3
+Node 5 responds to Node 3
+
+Node 3 receives response from Node 5
+Node 3 becomes the coordinator.
