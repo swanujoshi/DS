@@ -1,0 +1,86 @@
+// Create a simple web service and write any distributed application to consume the web service.
+
+prereq :
+
+netbeans 8.2
+jdk 8 or 8 +
+
+
+step 1 : File -> New project -> java web -> web application -> name : Assignment-7 ->  next  &  next &  Finish.
+
+( Create a new Project )
+
+step 2 : Right click on Assignment 7 -> New -> Web Service -> name: MyCalculatorWeb Service -> pacakge : com.myservice -> finish
+( Create a web Service )
+
+
+Step 3 : open MyCalculatorWebService.java -> remove sample code -> right click on MyCalculatorWebService.java -> add operation 
+	-> name: addition , retrun type double , add button click and then name num1 type double, add button click and then name num2 type double.-> Create this same for substraction,multiplication,division -> in operation change the return 0.0 to num1+num2 ,num1-num1.....
+
+( Creation of the operations) 
+
+
+Step 4 : Build Assignment-7 -> Deploy.
+
+( Build and Deploy Assignment-7 )
+
+Step 5 : Right click on MyCalculatorWebService -> Test Webservice
+( Test the created Web Service )
+
+
+Step 6 : ( Create the new project ) -> name : CalculatorWebServiceClient .
+( Creating the new project )
+
+step  7 : CalculatorWebServiceClient-> index.html -> windows->ide tools -> palette -> <Form> drag and drop -> action : CalculatorServlet
+	  -> in Form take 2  < text input > also write text Enter Number 1: & Enter Number 2: <br> -> <input type="submit value= ""Submit"/>
+
+( Design the webservice using Html and css)
+
+Step 8 :  CalculatorWebServiceClient Right click -> New -> Web Service Client -> Browse -> select MyCalculatorWebService -> Finish
+( Creating WebService reference )
+
+Step 9 :  CalculatorWebServiceClient Right click -> New -> Servlet -> name : CalulatorServlet -> next -> checkbox tick.-> Finish
+( Creating Servlet)
+
+step 10: From webservice refernce Drag and drop the operation in CalulatorServlet -> in try block we will declare 
+double num1,num2;
+
+num1 = Double.parseDouble(request.getparameter("number1"));
+num2 = Double.parseDouble(request.getparameter("number2"));
+
+
+in <body>
+out.println("<h1> Addition is : " + addition(num1,num2) + "<h1>");
+out.println("<h1> Substraction is : " + addition(num1,num2) + "<h1>");
+out.println("<h1> multiplication is : " + addition(num1,num2) + "<h1>");
+out.println("<h1> Division is : " + addition(num1,num2) + "<h1>");
+</body>
+
+
+step 11 :  CalculatorWebServiceClient Right click -> Clean & Build.
+	    CalculatorWebServiceClient -> index.html ->  Run
+
+
+<style>
+input {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: green;
+}
+
+#submitbtn {
+  width: 100px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: green;
+}
+</style>
+
+ 
+
+
